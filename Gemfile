@@ -64,5 +64,7 @@ gem 'pry-rails'
 gem 'compass-rails', '3.1.0'
 gem 'sprockets', '3.7.2'
 gem 'haml-rails'
-gem 'jquery-rails'
 gem 'font-awesome-sass'
+gem 'bootstrap', '~> 4.3.1'
+gem 'jquery-rails'
+
