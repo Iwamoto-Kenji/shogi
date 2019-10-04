@@ -1,4 +1,50 @@
+body {
+  padding-top: 70px;
+}
+
+.navbar-brand{
+  padding-left: 30px;
+}
+
+.icon-arrow-right{
+  position: absolute;
+  top: 50%;
+  right: 16px;
+  color: #ccc;
+  transform: translate(0, -50%);
+}
+
+.top-title{
+  font-size: 30px;
+  text-align: center;
+}
+
+.input-group{
+  margin-bottom: 30px;
+}
+
+.display-list{
+  font-size: 30px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.row-eq-height {
+  display: flex;
+  flex-wrap: wrap;
+}
+.col-md-4 {
+  height: 352px;
+  margin-bottom: 30px;
+}
+
+.box{
+  background:#ddd; 
+  border: 1px #ff0000 solid; 
+  padding:15px;
+  height: 100%;
+}
+
 .all{
   color: aqua;
 }
-
