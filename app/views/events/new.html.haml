@@ -1,0 +1,15 @@
+.main-wrapper
+  .post-new-container
+    %h2 投稿する
+    .form
+      = form_with do |f|
+        .title-field
+          = f.label :"イベント名"
+          %br/
+          = f.text_field  :title, class: "title"
+        .content-field
+          = f.label :"内容紹介"
+          = f.text_area :content
+        .actions
+          = f.submit "投稿", class: "submit-btn"
+
