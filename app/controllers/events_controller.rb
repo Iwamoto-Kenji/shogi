@@ -12,7 +12,6 @@ class EventsController < ApplicationController
     if @post.save
       redirect_to root_path, notice: '作成出来ました'
     end
-    Post.create(post_params)
   end
 
   private
