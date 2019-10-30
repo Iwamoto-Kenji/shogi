@@ -2,14 +2,18 @@
   .post-new-container
     %h2 投稿する
     .form
-      = form_with do |f|
+      = form_with model: @post,local: true, url: events_path do |f|
         .title-field
           = f.label :"イベント名"
           %br/
-          = f.text_field  :title, class: "title"
+          = f.text_field  :name, class: "title"
+        .image-field
+          = f.label :"写真"
+          %br/
+          = f.file_field  :image, class: "image"
         .content-field
           = f.label :"内容紹介"
-          = f.text_area :content
+          = f.text_area :text
         .actions
           = f.submit "投稿", class: "submit-btn"
 
