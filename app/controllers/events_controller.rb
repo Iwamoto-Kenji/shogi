@@ -7,7 +7,6 @@ class EventsController < ApplicationController
   end
 
   def create
-    # binding.pry
     @post = Post.new(post_params)
     if @post.save
       redirect_to root_path, notice: '作成出来ました'
