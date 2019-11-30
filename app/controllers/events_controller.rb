@@ -10,9 +10,14 @@ class EventsController < ApplicationController
   def create
     @post = Post.new(post_params)
     if @post.save
+      binding.pry
       redirect_to root_path, notice: '作成出来ました'
     end
   end
+
+  # def create
+  #   Tweet.create(name: tweet_params[:name], image: tweet_params[:image], text: tweet_params[:text], user_id: current_user.id)
+  # end
 
   def destroy
     @post = Post.find(params[:id])
@@ -27,7 +32,7 @@ class EventsController < ApplicationController
 
   private
   def post_params
-    params.permit(:name, :image, :text)
+    params.permit(:name, :image, :text).merge(user_id: current_user.id)
   end
 
 end
