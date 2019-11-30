@@ -21,8 +21,8 @@
       .col-md-4
         .box
           %h3
-            = post.name
+            = post.name.truncate(12)
           = link_to event_path(post.id) do
             = image_tag post.image.url, class: 'box-image'
-          = post.text
+          = post.text.truncate(23)
 = paginate(@posts)

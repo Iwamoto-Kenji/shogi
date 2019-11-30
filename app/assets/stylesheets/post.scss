@@ -1,5 +1,3 @@
-// post-new
-
 .post-new-container {
   border: solid 1px;
   background-color: white;
@@ -48,4 +46,56 @@
 
 .submit-btn:hover {
   opacity: 0.8;
+}
+
+//eventshow
+.box-show{
+  text-align:center
+}
+
+.box-image-show{
+  width: 500px;
+  max-width: 100%;
+  padding-bottom: 30px;
+}
+
+.event-show{
+  width: 90%;
+  margin: 0 auto;
+  font-size: 14px;
+}
+
+th{
+  background-color: #f7f7f7;
+    text-align: left;
+    padding: 5px;
+    width: 20%;
+    color: #666;
+    font-weight: normal;
+    border: 1px solid #aaa;
+}
+
+td{
+  padding: 5px;
+  border: 1px solid #aaa;
+}
+
+.edit-btn{
+  border-style: none;
+  background-color:blue;
+  color: white;
+  font-size: 18px;
+  height: 50px;
+  width: 120px;
+  cursor: pointer;
+}
+
+.delete-btn{
+  border-style: none;
+  background-color:red;
+  color: white;
+  font-size: 18px;
+  height: 50px;
+  width: 120px;
+  cursor: pointer;
 }

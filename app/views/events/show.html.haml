@@ -1,0 +1,15 @@
+.container
+  .box-show
+    = image_tag @posts.image.url, class: 'box-image-show'
+
+  %table.event-show
+    %tr
+      %th イベント名
+      %td
+        = @posts.name
+    %tr
+      %th 説明
+      %td
+        = @posts.text
+  %br
+
