@@ -4,6 +4,7 @@ class EventsController < ApplicationController
   end
 
   def show
+    @posts = Post.find(params[:id])
   end
 
   def create
@@ -11,6 +12,10 @@ class EventsController < ApplicationController
     if @post.save
       redirect_to root_path, notice: '作成出来ました'
     end
+  end
+
+  def edit
+    @posts = Post.find(params[:id])
   end
 
   private
