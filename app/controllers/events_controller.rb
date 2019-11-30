@@ -1,6 +1,6 @@
 class EventsController < ApplicationController
   def index
-    @posts = Post.all
+    @posts = Post.all.order("created_at DESC").page(params[:page]).per(6)
   end
 
   def show

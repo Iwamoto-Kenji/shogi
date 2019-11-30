@@ -23,5 +23,6 @@
           %h3
             = post.name
           = link_to event_path(post.id) do
-            = image_tag post.image.url, class: 'image'
+            = image_tag post.image.url, class: 'box-image'
           = post.text
+= paginate(@posts)
