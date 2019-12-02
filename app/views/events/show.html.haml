@@ -4,6 +4,10 @@
 
   %table.event-show
     %tr
+      %th 投稿者
+      %td
+        = @posts.user.name
+    %tr
       %th イベント名
       %td
         = @posts.name
