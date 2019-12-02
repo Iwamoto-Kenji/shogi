@@ -50,5 +50,6 @@ test:
 production:
   <<: *default
   database: shogi_production
-  username: shogi
-  password: <%= ENV['SHOGI_DATABASE_PASSWORD'] %>
+  username: root
+  password: <%= ENV['DATABASE_PASSWORD'] %>
+  socket: /var/lib/mysql/mysql.sock
