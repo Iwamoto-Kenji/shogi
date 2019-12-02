@@ -23,12 +23,21 @@ class EventsController < ApplicationController
   end
 
   def edit
-    @posts = Post.find(params[:id])
+    @post = Post.find(params[:id])
+  end
+
+  def update
+    post = Post.find(params[:id])
+    if post.user_id == current_user.id
+      # binding.pry
+      post.update(post_params)
+      redirect_to root_path
+    end
   end
 
   private
   def post_params
-    params.permit(:name, :image, :text).merge(user_id: current_user.id)
+    params.require(:post).permit(:name, :image, :text).merge(user_id: current_user.id)
   end
 
 end
