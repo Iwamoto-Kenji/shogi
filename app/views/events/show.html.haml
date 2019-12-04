@@ -14,7 +14,7 @@
     %tr
       %th 説明
       %td
-        = @posts.text
+        = simple_format @posts.text
   %br
   - if user_signed_in? && current_user.id == @posts.user_id
     = link_to "編集", edit_event_path(@posts.id), class: "btn btn-primary"
