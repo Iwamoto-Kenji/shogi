@@ -3,6 +3,10 @@ class EventsController < ApplicationController
     @posts = Post.all.order("created_at DESC").page(params[:page]).per(6)
   end
 
+  def new
+    @post = Post.new
+  end
+
   def show
     @posts = Post.find(params[:id])
   end
@@ -29,7 +33,6 @@ class EventsController < ApplicationController
   def update
     post = Post.find(params[:id])
     if post.user_id == current_user.id
-      # binding.pry
       post.update(post_params)
       redirect_to root_path
     end
