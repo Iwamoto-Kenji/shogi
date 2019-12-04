@@ -1,4 +1,5 @@
 class EventsController < ApplicationController
+  before_action :set_post,only:[:destroy, :edit, :update]
   def index
     @posts = Post.all.order("created_at DESC").page(params[:page]).per(6)
   end
@@ -19,7 +20,6 @@ class EventsController < ApplicationController
   end
 
   def destroy
-    @post = Post.find(params[:id])
     if @post.user_id == current_user.id
       @post.destroy
       redirect_to root_path
@@ -27,13 +27,11 @@ class EventsController < ApplicationController
   end
 
   def edit
-    @post = Post.find(params[:id])
   end
 
   def update
-    post = Post.find(params[:id])
-    if post.user_id == current_user.id
-      post.update(post_params)
+    if @post.user_id == current_user.id
+      @post.update(post_params)
       redirect_to root_path
     end
   end
@@ -41,6 +39,10 @@ class EventsController < ApplicationController
   private
   def post_params
     params.require(:post).permit(:name, :image, :text).merge(user_id: current_user.id)
+  end
+
+  def set_post
+    @post = Post.find(params[:id])
   end
 
 end
