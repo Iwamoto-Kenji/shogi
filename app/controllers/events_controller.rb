@@ -1,7 +1,7 @@
 class EventsController < ApplicationController
   before_action :set_post,only:[:destroy, :edit, :update]
   def index
-    @posts = Post.all.order("created_at DESC").page(params[:page]).per(6)
+    @posts = Post.all.order("created_at DESC").page(params[:page]).per(6).search(params[:search])
   end
 
   def new
@@ -34,6 +34,10 @@ class EventsController < ApplicationController
       @post.update(post_params)
       redirect_to root_path
     end
+  end
+
+  def search
+    @post = Post.where('name LIKE(?)', "%#{params[:keyword]}%")
   end
 
   private

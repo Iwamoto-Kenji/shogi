@@ -1,11 +1,16 @@
+.App-Description
+  全国各地で行われている将棋イベントの紹介サイトです。
+
 .top-title
   イベントの検索
 .events-search
   .events-name
     イベント名
-  .input-group
-    %input.form-control{:type => "text"}/
-  %input.btn.btn-primary{:type => "submit", :value => "検索"}/
+
+= form_tag(events_path, method: "get", class: "input-group") do
+  = text_field_tag :search
+  = submit_tag "検索" ,name: nil ,class: "btn btn-primary"
+
 
 .display-list
   イベント一覧
@@ -14,8 +19,8 @@
     - @posts.each do |post|
       .col-md-4
         .box
-          %h3
-            = post.name.truncate(12)
+          .event-name
+            = post.name.truncate(16)
           = link_to event_path(post.id) do
             = image_tag post.image.url, class: 'box-image'
           = post.text.truncate(23)
