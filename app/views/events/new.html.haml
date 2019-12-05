@@ -8,12 +8,12 @@
           %br/
           = f.text_field  :name, class: "title"
         .image-field
-          = f.label :"写真"
+          = f.label :"写真（会場の建物等の写真を添付し下さい）"
           %br/
           = f.file_field  :image, class: "image"
         .content-field
-          = f.label :"内容紹介"
-          = f.text_area :text
+          = f.label :"内容紹介（ご自由に編集して下さい）"
+          = f.text_area :text ,value: "日時：\n場所：\n参加棋士：\nURL：\n内容："
         .actions
           = f.submit "投稿", class: "submit-btn"
 
