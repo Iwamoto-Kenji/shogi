@@ -1,16 +1,16 @@
-.App-Description
+%h5.description
   全国各地で行われている将棋イベントの紹介サイトです。
-
+  %br/
+  皆様の投稿をお待ちしております。
+  
 .top-title
   イベントの検索
 .events-search
   .events-name
     イベント名
-
 = form_tag(events_path, method: "get", class: "input-group") do
   = text_field_tag :search
   = submit_tag "検索" ,name: nil ,class: "btn btn-primary"
-
 
 .display-list
   イベント一覧
