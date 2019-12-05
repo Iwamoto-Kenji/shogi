@@ -1,24 +1,41 @@
-# README
+# 概要
+将棋のイベントを管理するWebアプリケーションです。
+将棋が好きな人が全国で行われているイベントを紹介し、
+充実した生活にすることを目指しています。
+転職活動用のポートフォリオとして制作致しました。
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# テストユーザーログイン
+・email: test@test
+・password: 123456
 
-Things you may want to cover:
+# リンク
+・本アプリケーション：http://52.192.165.172/
 
-* Ruby version
+# 機能一覧
+・記事投稿機能（CRUD）
+・投稿記事一覧表示機能
+・投稿記事詳細表示機能
+・管理ユーザー登録機能
+・管理ユーザーログイン機能
+・画像ファイルアップデート機能
+・ページネーション機能（kaminari）
 
-* System dependencies
+# 使用技術
+・Ruby 2.5.1
+・Rails 5.2.3
+・MySQL 5.6.43
+・Bootstrap4
+・HTML5
+・Haml
+・SASS
+・Capistrano 3.11.1
+・AWS
+  ・EC2
+  ・S3
+・GitHub
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+# 改善点
+・文字列や場所、日付による検索機能の追加
+・各イベントへのコメント機能の追加
+・Dockerの導入
+・CircleCIを利用したCI/CDパイプラインの構築
