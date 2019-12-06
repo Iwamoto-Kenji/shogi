@@ -27,7 +27,7 @@
 - Bootstrap4
 - HTML5
 - Haml
-- SASS
+- CSS
 - Capistrano 3.11.1
 - AWS
   - EC2
